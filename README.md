@@ -3,7 +3,11 @@
 
 
 from bs4 import BeautifulSoup
+
+
 import requests
+
+
 import pandas as pd
 
 URL = "https://en.wikipedia.org/wiki/List_of_largest_manufacturing_companies_by_revenue"
@@ -27,5 +31,7 @@ for i in range(1, len(rows)):
         values = [td.text.replace('\n','').replace('\xa0','') for td in tds]
 
     df = df.append(pd.Series(values, index=columns), ignore_index=True)
+
 #in this '' below you just have to put your file location in your computer.
-    df.to_csv(r''+'\\manufactureTop10.csv', index=False)
+   
+   df.to_csv(r''+'\\manufactureTop10.csv', index=False)
