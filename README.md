@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 
 import requests
 
-
 import pandas as pd
 
 URL = "https://en.wikipedia.org/wiki/List_of_largest_manufacturing_companies_by_revenue"
